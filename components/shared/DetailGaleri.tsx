@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, X } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export interface GalleryImage {
   id: string | number;
@@ -18,15 +19,33 @@ interface DetailGaleriProps {
   onClose?: () => void;
 }
 
+const Frame = ({ image, className, onClick }: { image?: GalleryImage, className?: string, onClick?: () => void }) => (
+  <div 
+    className={`relative bg-[#E0E0E0] p-2 md:p-3 rounded-2xl md:rounded-3xl shadow-2xl flex flex-col items-center group ${onClick ? 'cursor-pointer hover:bg-white transition-colors duration-300' : ''} ${className}`}
+    onClick={onClick}
+  >
+    <div className="w-full flex-1 bg-gray-400 rounded-xl md:rounded-2xl overflow-hidden relative">
+      {image ? (
+        <Image src={image.src} alt={image.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" unoptimized />
+      ) : (
+        <div className="w-full h-full bg-gray-400" />
+      )}
+    </div>
+    <div className="h-3 md:h-4 w-12 md:w-16 bg-gray-400 group-hover:bg-gray-300 rounded-full mt-2 md:mt-3 mb-1 shrink-0 transition-colors"></div>
+  </div>
+);
+
 export default function DetailGaleri({ initialImageId, images, onClose }: DetailGaleriProps) {
   const router = useRouter();
   const containerRef = useRef<HTMLDivElement>(null);
   
   const [activeImageId, setActiveImageId] = useState(initialImageId || (images.length > 0 ? images[0].id : ""));
+  const [prevInitialImageId, setPrevInitialImageId] = useState(initialImageId);
 
-  useEffect(() => {
+  if (initialImageId !== prevInitialImageId) {
+    setPrevInitialImageId(initialImageId);
     if (initialImageId) setActiveImageId(initialImageId);
-  }, [initialImageId]);
+  }
 
   const currentIdx = images.findIndex((img) => img.id === activeImageId);
   const currentImage = currentIdx !== -1 ? images[currentIdx] : images[0];
@@ -55,21 +74,21 @@ export default function DetailGaleri({ initialImageId, images, onClose }: Detail
     };
   }, []);
 
+  const handleBack = useCallback(() => {
+    if (onClose) {
+      onClose();
+    } else {
+      router.back();
+    }
+  }, [onClose, router]);
+
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") handleBack();
     };
     document.addEventListener("keydown", handleEscape);
     return () => document.removeEventListener("keydown", handleEscape);
-  }, []);
-
-  const handleBack = () => {
-    if (onClose) {
-      onClose();
-    } else {
-      router.back();
-    }
-  };
+  }, [handleBack]);
 
   const handleImageClick = (id: string | number) => {
     setActiveImageId(id);
@@ -78,22 +97,6 @@ export default function DetailGaleri({ initialImageId, images, onClose }: Detail
       containerRef.current.scrollTo({ left: 0, behavior: 'smooth' });
     }
   };
-
-  const Frame = ({ image, className, onClick }: { image?: GalleryImage, className?: string, onClick?: () => void }) => (
-    <div 
-      className={`relative bg-[#E0E0E0] p-2 md:p-3 rounded-2xl md:rounded-3xl shadow-2xl flex flex-col items-center group ${onClick ? 'cursor-pointer hover:bg-white transition-colors duration-300' : ''} ${className}`}
-      onClick={onClick}
-    >
-      <div className="w-full flex-1 bg-gray-400 rounded-xl md:rounded-2xl overflow-hidden relative">
-        {image ? (
-          <img src={image.src} alt={image.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-        ) : (
-          <div className="w-full h-full bg-gray-400" />
-        )}
-      </div>
-      <div className="h-3 md:h-4 w-12 md:w-16 bg-gray-400 group-hover:bg-gray-300 rounded-full mt-2 md:mt-3 mb-1 shrink-0 transition-colors"></div>
-    </div>
-  );
 
   if (!images || images.length === 0) return null;
 

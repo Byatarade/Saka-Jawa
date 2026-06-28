@@ -6,7 +6,7 @@ export default function WayangFeatureSection() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-6 relative">
-            <img src="/Assets/Bunga Kuning.svg" className="pointer-events-none absolute -left-6 -top-6 hidden w-20 opacity-80 lg:block" />
+            <Image src="/Assets/Bunga Kuning.svg" alt="" width={80} height={80} className="pointer-events-none absolute -left-6 -top-6 hidden w-20 opacity-80 lg:block" />
             <h2 className="text-3xl font-extrabold text-[#7a2a1f] mb-4">Keistimewaan Wayang</h2>
             <p className="text-[rgba(0,0,0,0.65)] mb-6 max-w-xl">
               Jelajahi filosofi, teknik pertunjukan, dan warisan budaya wayang yang hidup di Jawa.

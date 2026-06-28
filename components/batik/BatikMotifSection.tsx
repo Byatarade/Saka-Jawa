@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import DetailGaleri from "../shared/DetailGaleri";
 
 export default function BatikMotifSection() {
@@ -88,10 +89,12 @@ export default function BatikMotifSection() {
               >
                 {/* Image Container */}
                 <div className="w-full aspect-[4/3] bg-[#D9D9D9] rounded-xl overflow-hidden mb-6 relative">
-                  <img
+                  <Image
                     src={motif.imageSrc}
                     alt={motif.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    unoptimized
                   />
                 </div>
 
