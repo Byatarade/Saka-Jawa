@@ -1,30 +1,6 @@
-export interface BatikHeroAction {
-  id: string;
-  label: string;
-  variant: "primary" | "secondary";
-}
+import { HeroContent } from "../shared/HeroSection";
 
-export interface BatikHeroContent {
-  badge: {
-    iconSrc: string;
-    iconAlt: string;
-    label: string;
-  };
-  headline: string;
-  subheadline: string;
-  description: string;
-  actions: BatikHeroAction[];
-  image: {
-    src: string;
-    alt: string;
-  };
-  dots: {
-    count: number;
-    activeIndex: number;
-  };
-}
-
-export const batikHeroContent: BatikHeroContent = {
+export const batikHeroContent: HeroContent = {
   badge: {
     iconSrc: "/Assets/Pendhopo Batik.svg",
     iconAlt: "Ikon Pendhapa",
@@ -35,8 +11,8 @@ export const batikHeroContent: BatikHeroContent = {
   description:
     "Di balik setiap guratan tokoh wayang, tersimpan filosofi mendalam dan nilai kehidupan masyarakat Jawa.",
   actions: [
-    { id: "btn-tentang-batik", label: "Tentang Batik", variant: "primary" },
-    { id: "btn-jelajahi-motif", label: "Jelajahi Motif", variant: "secondary" },
+    { id: "btn-tentang-batik", label: "Tentang Batik", variant: "primary", href: "#batik-about" },
+    { id: "btn-jelajahi-motif", label: "Jelajahi Motif", variant: "secondary", href: "#batik-motif" },
   ],
   image: {
     src: "/Assets/Batik Section Sejarawan.svg",
@@ -46,4 +22,5 @@ export const batikHeroContent: BatikHeroContent = {
     count: 5,
     activeIndex: 1,
   },
+  bottomWaveSrc: "/Assets/Batik Sambungan.svg",
 };
