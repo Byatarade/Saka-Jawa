@@ -14,15 +14,7 @@ const heroLayers = {
   chatbot: "/Assets/Chatbot Abdi Dalem.svg",
 };
 
-const navLeft = [
-  { label: "Beranda", href: "/" },
-  { label: "Kekayaan Alam", href: "#kekayaan-alam" },
-];
 
-const navRight = [
-  { label: "Permainan", href: "#permainan" },
-  { label: "Tentang Kami", href: "#tentang-kami" },
-];
 
 function LayerImage({
   src,
@@ -154,45 +146,7 @@ export default function LandingHeroSection() {
         </div>
       </div>
 
-      <header className="absolute left-1/2 top-5 z-60 w-full max-w-[860px] -translate-x-1/2 px-5 sm:top-8">
-        <nav
-          className="grid grid-cols-[1fr_auto_1fr] items-center gap-4 text-[0.8rem] font-bold text-white drop-shadow-[0_2px_8px_rgba(72,33,8,0.35)] sm:text-base"
-          aria-label="Navigasi utama"
-        >
-          <div className="flex min-w-0 flex-wrap items-center justify-end gap-x-5 gap-y-2 sm:gap-x-10">
-            {navLeft.map((item) => (
-              <Link key={item.label} href={item.href} className="transition-opacity hover:opacity-75">
-                {item.label}
-              </Link>
-            ))}
-          </div>
 
-          <Link
-            href="/"
-            aria-label="Saka Jawa"
-            className="relative block h-[54px] w-[48px] sm:h-[70px] sm:w-[61px]"
-          >
-            <Image
-              src={heroLayers.logo}
-              alt="Saka Jawa"
-              fill
-              sizes="64px"
-              loading="eager"
-              fetchPriority="high"
-              unoptimized
-              className="object-contain"
-            />
-          </Link>
-
-          <div className="flex min-w-0 flex-wrap items-center justify-start gap-x-5 gap-y-2 sm:gap-x-10">
-            {navRight.map((item) => (
-              <Link key={item.label} href={item.href} className="transition-opacity hover:opacity-75">
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        </nav>
-      </header>
 
       <div className="absolute left-1/2 top-[43%] z-0 w-[min(92vw,820px)] -translate-x-1/2 -translate-y-1/2 text-center">
         <div ref={textRef} className="will-change-transform">

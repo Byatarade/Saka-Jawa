@@ -1,0 +1,55 @@
+export default function LandingImportanceSection() {
+  const cards = [
+    {
+      number: "200K+",
+      title: "Perajin Batik",
+      description: "Tradisi membatik terus hidup melalui tangan para pengrajin Indonesia",
+    },
+    {
+      number: "3",
+      title: "Diakui UNESCO",
+      description: "Batik, Wayang, dan Gamelan diakui sebagai kekayaan budaya dunia",
+    },
+    {
+      number: "1000+",
+      title: "Tahun Tradisi",
+      description: "Warisan cerita dan filosofi yang bertahan lintas generasi.",
+    },
+  ];
+
+  return (
+    <section className="bg-[#3A141A] py-24 px-6 md:px-12 lg:px-24 w-full">
+      <div className="max-w-[1200px] mx-auto flex flex-col items-center">
+        <h2 className="text-3xl md:text-[40px] font-bold text-white mb-4 text-center">
+          Mengapa Warisan Budaya Penting?
+        </h2>
+        <p className="text-white/80 text-center max-w-xl text-[15px] md:text-base leading-relaxed mb-16">
+          Warisan budaya Jawa tidak hanya hidup dalam tradisi,<br className="hidden md:block" />
+          tetapi juga diakui dan dihargai oleh dunia.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full max-w-5xl mx-auto">
+          {cards.map((card, idx) => (
+            <div key={idx} className="relative group cursor-pointer min-h-[260px]">
+              {/* Shadow Backdrop (visible only on hover) */}
+              <div className="absolute inset-0 bg-[#E8D4D6] rounded-3xl transform translate-x-4 translate-y-4 md:translate-x-5 md:translate-y-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              {/* Main Card */}
+              <div className="relative bg-[#B4979A]/80 group-hover:bg-[#FFC832] rounded-3xl p-8 md:p-10 text-center flex flex-col items-center justify-center shadow-xl z-10 h-full transition-all duration-300 origin-center group-hover:-rotate-6 group-hover:-translate-y-2 group-hover:-translate-x-1">
+                <h3 className="text-4xl md:text-5xl font-extrabold text-[#111] mb-2 tracking-tight">
+                  {card.number}
+                </h3>
+                <h4 className="text-[17px] font-bold text-[#111] mb-6">
+                  {card.title}
+                </h4>
+                <p className="text-[13px] md:text-[14px] text-[#222] leading-relaxed font-medium px-2">
+                  {card.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
