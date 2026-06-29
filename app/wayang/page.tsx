@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import WayangHeroSection from "@/components/wayang/WayangHeroSection";
-import WayangStorySection from "@/components/wayang/WayangStorySection";
-import Footer from "@/components/shared/Footer";
+import WayangAboutSection from "@/components/wayang/WayangAboutSection";
+import WayangRagamSection from "@/components/wayang/WayangRagamSection";
+import WayangQuotesSection from "@/components/wayang/WayangQuotesSection";
+import WayangCeritaSection from "@/components/wayang/WayangCeritaSection";
+import WayangGallerySection from "@/components/wayang/WayangGallerySection";
+import WayangInteractiveMapSection from "@/components/wayang/WayangInteractiveMapSection";
+import WayangDewantaraQuoteSection from "@/components/wayang/WayangDewantaraQuoteSection";
 import { topicPageMetadata } from "@/data/pages";
 
 export const metadata: Metadata = topicPageMetadata.wayang;
@@ -10,8 +15,13 @@ export default function WayangPage() {
   return (
     <main>
       <WayangHeroSection />
-      <WayangStorySection />
-      <Footer />
+      <WayangAboutSection />
+      <WayangRagamSection />
+      <WayangQuotesSection />
+      <WayangCeritaSection />
+      <WayangGallerySection />
+      <WayangInteractiveMapSection />
+      <WayangDewantaraQuoteSection />
     </main>
   );
 }

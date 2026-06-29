@@ -1,0 +1,93 @@
+import Image from "next/image";
+
+const wayangStories = [
+  {
+    id: 1,
+    title: "Ksatria Arjuna",
+    desc: "Ksatria penengah Pandawa yang berparas menawan, ahli memanah, dan penegak keadilan dalam Bharatayuda.",
+    image: "/Assets/wayangHeroAsset.avif",
+  },
+  {
+    id: 2,
+    title: "Bima Sena",
+    desc: "Tokoh Pandawa kedua yang gagah berani, berbadan besar, memiliki kuku Pancanaka, dan setia pada kebenaran.",
+    image: "/Assets/wayangHeroAsset.avif",
+  },
+  {
+    id: 3,
+    title: "Gatotkaca",
+    desc: "Ksatria otot kawat balung wesi, putra Bima yang memiliki kesaktian luar biasa hingga mampu terbang tanpa sayap.",
+    image: "/Assets/wayangHeroAsset.avif",
+  },
+];
+
+export default function WayangCeritaSection() {
+  return (
+    <section className="relative z-40 py-20 px-6 md:px-12 lg:px-24 bg-[#3e0b10] text-white">
+      <div className="mx-auto w-full max-w-[var(--container-lg)]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          {/* Left Header content */}
+          <div className="lg:col-span-4 flex flex-col gap-6 text-left">
+            <div>
+              <h3 className="font-['League_Spartan'] text-3xl md:text-4xl font-bold leading-tight">
+                Cerita Wayang Penuh Makna
+              </h3>
+              <p className="mt-4 font-['League_Spartan'] text-base text-white/80 leading-relaxed">
+                Kenali kisah-kisah legendaris serta ketokohan para ksatria pewayangan Jawa dan filosofi luhurnya.
+              </p>
+            </div>
+            <div>
+              <a
+                href="#"
+                className="inline-flex items-center gap-3 rounded-full bg-[#ffc832] px-6 py-3 font-semibold text-[#4e0b11] transition-transform hover:scale-105 active:scale-95"
+              >
+                <span>Lihat Cerita</span>
+                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Right Cards List */}
+          <div className="lg:col-span-8 grid gap-6 sm:grid-cols-3">
+            {wayangStories.map((story) => (
+              <div key={story.id} className="rounded-xl bg-[#F8F5EE] p-4 text-stone-900 shadow-md flex flex-col justify-between min-h-[350px]">
+                <div>
+                  {/* Card Image */}
+                  <div className="aspect-[4/3] w-full relative rounded-lg overflow-hidden bg-stone-200">
+                    <Image
+                      src={story.image}
+                      alt={story.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  {/* Title */}
+                  <h4 className="mt-4 font-['League_Spartan'] text-xl font-bold text-[#4e0b11]">
+                    {story.title}
+                  </h4>
+                  {/* Description */}
+                  <p className="mt-2 font-['League_Spartan'] text-sm text-stone-700 leading-relaxed">
+                    {story.desc}
+                  </p>
+                </div>
+                {/* Actions inside card */}
+                <div className="mt-4 pt-4 border-t border-stone-200 flex items-center justify-between">
+                  <span className="font-['League_Spartan'] text-sm font-semibold text-[#4e0b11]">
+                    Lihat Ringkasan
+                  </span>
+                  <button className="w-8 h-8 rounded-full bg-[#4e0b11] text-white flex items-center justify-center transition-transform hover:scale-110">
+                    ▶
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
