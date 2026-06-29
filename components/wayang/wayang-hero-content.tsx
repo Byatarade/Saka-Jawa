@@ -24,16 +24,4 @@ export const wayangHeroContent: HeroContent = {
     count: 4,
     activeIndex: 1,
   },
-
-  customImageRender: () => (
-    <div className="relative w-full max-w-[620px] overflow-hidden rounded-r-[180px] rounded-l-[20px] border border-stone-200/50 bg-stone-50 p-2 shadow-[0_20px_50px_rgba(78,11,17,0.12)]">
-      <div className="relative aspect-[16/10] w-full min-h-[300px] sm:min-h-[380px] overflow-hidden rounded-r-[170px] rounded-l-[15px]">
-        <img
-          src="/Assets/wayangHeroAsset.avif"
-          alt="Seni Wayang Kulit Jawa"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      </div>
-    </div>
-  ),
 };
