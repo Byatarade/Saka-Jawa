@@ -2,13 +2,22 @@ import Image from "next/image";
 
 export default function WayangFeatureSection() {
   return (
-    <section className="relative py-16 lg:py-20">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center">
-          <div className="lg:col-span-6 relative">
-            <Image src="/Assets/Bunga Kuning.svg" alt="" width={80} height={80} className="pointer-events-none absolute -left-6 -top-6 hidden w-20 opacity-80 lg:block" />
-            <h2 className="text-3xl font-extrabold text-[#7a2a1f] mb-4">Keistimewaan Wayang</h2>
-            <p className="text-[rgba(0,0,0,0.65)] mb-6 max-w-xl">
+    <section className="relative overflow-hidden px-6 py-24 md:px-12 lg:px-24 lg:py-32 bg-[#F9F1E4]">
+      {/* Decorative Flowers */}
+      <div className="absolute top-0 left-0 w-56 h-56 md:w-80 md:h-80 pointer-events-none -translate-x-1/4 -translate-y-1/4 opacity-90">
+        <Image
+          src="/Assets/Bunga Kuning.svg"
+          alt="Bunga Kuning"
+          fill
+          className="object-contain"
+        />
+      </div>
+
+      <div className="mx-auto w-full max-w-[var(--container-lg)] relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center">
+          <div className="lg:col-span-6 flex flex-col pt-10">
+            <h2 className="text-4xl md:text-[42px] font-bold text-[#4E0B11] mb-6">Keistimewaan Wayang</h2>
+            <p className="text-base md:text-lg leading-relaxed text-[#4A332B] mb-12 max-w-lg">
               Jelajahi filosofi, teknik pertunjukan, dan warisan budaya wayang yang hidup di Jawa.
             </p>
 
@@ -24,13 +33,13 @@ export default function WayangFeatureSection() {
               </div>
             </div>
 
-            <div className="mt-6 flex gap-3">
-              <a href="#" className="inline-flex items-center justify-center rounded-full bg-[#b33a26] px-5 py-2 text-sm font-semibold text-white shadow">Pelajari Lebih Lanjut</a>
-              <a href="#" className="inline-flex items-center justify-center rounded-full border border-[var(--color-border)] px-5 py-2 text-sm font-semibold text-[#7a2a1f]">Jadwalkan Kunjungan</a>
+            <div className="mt-8 flex gap-3">
+              <a href="#" className="inline-flex items-center justify-center rounded-full bg-[#5b0917] px-6 py-2.5 font-semibold text-white shadow hover:bg-[#4E0B11] transition-colors">Pelajari Lebih Lanjut</a>
+              <a href="#" className="inline-flex items-center justify-center rounded-full border border-[#5b0917] px-6 py-2.5 font-semibold text-[#5b0917] hover:bg-[#5b0917]/5 transition-colors">Jadwalkan Kunjungan</a>
             </div>
           </div>
 
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-6 relative w-full max-w-[540px] mx-auto lg:ml-auto mt-8 lg:mt-0">
             <div className="relative rounded-xl overflow-hidden shadow-2xl">
               <div className="aspect-[16/10] w-full relative">
                 <Image src="/Assets/Pendhopo Wayang.svg" alt="Pendhopo Wayang" fill className="object-cover" />
@@ -43,7 +52,8 @@ export default function WayangFeatureSection() {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-24 bg-[length:auto_90px] bg-repeat-x" style={{ backgroundImage: "url('/Assets/Batik Sambungan.svg')" }} />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-8 w-full bg-[length:auto_32px] bg-repeat-x" style={{ backgroundImage: "url('/Assets/Batik Sambungan.svg')" }} />
+
     </section>
   );
 }
