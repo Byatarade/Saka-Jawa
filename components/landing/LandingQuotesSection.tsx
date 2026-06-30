@@ -53,16 +53,16 @@ export default function LandingQuotesSection() {
   });
 
   // Karena section ini sekarang tinggi, awan harus menyingkir lebih cepat (di 30% awal scroll)
-  // Kita map 0 sampai 0.4 ke animasi penuh agar awan segera terbuka
-  const xLeft1 = useTransform(scrollYProgress, [0, 0.6], ["0%", "-150%"]);
-  const xLeft2 = useTransform(scrollYProgress, [0, 0.6], ["0%", "-130%"]);
-  const xLeft3 = useTransform(scrollYProgress, [0, 0.6], ["0%", "-115%"]);
-  const xLeft4 = useTransform(scrollYProgress, [0, 0.6], ["0%", "-100%"]);
+  // Kita map 0.15 sampai 0.6 ke animasi penuh agar awan segera terbuka setelah sedikit scroll
+  const xLeft1 = useTransform(scrollYProgress, [0, 0.6], ["0%", "-110%"]);
+  const xLeft2 = useTransform(scrollYProgress, [0, 0.7], ["0%", "-105%"]);
+  const xLeft3 = useTransform(scrollYProgress, [0, 0.8], ["0%", "-100%"]);
+  const xLeft4 = useTransform(scrollYProgress, [0, 0.6], ["0%", "-105%"]);
 
-  const xRight1 = useTransform(scrollYProgress, [0, 0.6], ["0%", "150%"]);
-  const xRight2 = useTransform(scrollYProgress, [0, 0.6], ["0%", "130%"]);
-  const xRight3 = useTransform(scrollYProgress, [0, 0.6], ["0%", "115%"]);
-  const xRight4 = useTransform(scrollYProgress, [0, 0.6], ["0%", "100%"]);
+  const xRight1 = useTransform(scrollYProgress, [0, 0.6], ["0%", "110%"]);
+  const xRight2 = useTransform(scrollYProgress, [0, 0.7], ["0%", "105%"]);
+  const xRight3 = useTransform(scrollYProgress, [0, 0.8], ["0%", "100%"]);
+  const xRight4 = useTransform(scrollYProgress, [0, 0.6], ["0%", "105%"]);
 
   return (
     <section 
@@ -83,30 +83,30 @@ export default function LandingQuotesSection() {
       {/* --- MEGA MENDUNG PARALLAX OVERLAY --- */}
       <div className="absolute top-0 left-0 w-full h-[40vh] md:h-[50vh] lg:h-[60vh] z-30 pointer-events-none">
         {/* --- LEFT CLOUDS --- */}
-        <motion.div style={{ x: xLeft1 }} className="absolute top-[0%] left-[-10%] w-[55%] h-[60%] z-10">
-          <Image src="/Assets/Left%20Mega%20Mendung.svg" alt="" fill className="object-cover object-right-top opacity-80" />
+        <motion.div style={{ x: xLeft1 }} className="absolute top-[0%] left-[-5%] w-[65%] h-[73%] z-10">
+          <Image src="/Assets/Left%20Mega%20Mendung.svg" alt="" fill className="object-cover object-right-top" />
         </motion.div>
-        <motion.div style={{ x: xLeft2 }} className="absolute top-[18%] left-[-5%] w-[58%] h-[65%] z-20">
-          <Image src="/Assets/Left%20Mega%20Mendung.svg" alt="" fill className="object-cover object-right-top opacity-90" />
+        <motion.div style={{ x: xLeft2 }} className="absolute top-[18%] left-[-5%] w-[65%] h-[73%] z-20">
+          <Image src="/Assets/Left%20Mega%20Mendung.svg" alt="" fill className="object-cover object-right-top" />
         </motion.div>
-        <motion.div style={{ x: xLeft3 }} className="absolute top-[38%] left-[0%] w-[60%] h-[70%] z-30">
-          <Image src="/Assets/Left%20Mega%20Mendung.svg" alt="" fill className="object-cover object-right-top opacity-95" />
+        <motion.div style={{ x: xLeft3 }} className="absolute top-[38%] left-[-5%] w-[65%] h-[73%] z-10">
+          <Image src="/Assets/Left%20Mega%20Mendung.svg" alt="" fill className="object-cover object-right-top" />
         </motion.div>
-        <motion.div style={{ x: xLeft4 }} className="absolute top-[58%] left-[3%] w-[65%] h-[80%] z-40 drop-shadow-2xl">
+        <motion.div style={{ x: xLeft4 }} className="absolute top-[58%] left-[-5%] w-[65%] h-[73%] z-20 drop-shadow-2xl">
           <Image src="/Assets/Left%20Mega%20Mendung.svg" alt="Left Mega Mendung" fill className="object-cover object-right-top" />
         </motion.div>
 
         {/* --- RIGHT CLOUDS --- */}
-        <motion.div style={{ x: xRight1 }} className="absolute top-[0%] right-[-10%] w-[55%] h-[60%] z-10">
-          <Image src="/Assets/Right%20Mega%20Mendung.svg" alt="" fill className="object-cover object-left-top opacity-80" />
+        <motion.div style={{ x: xRight1 }} className="absolute top-[0%] right-[-5%] w-[65%] h-[73%] z-10">
+          <Image src="/Assets/Right%20Mega%20Mendung.svg" alt="" fill className="object-cover object-left-top" />
         </motion.div>
-        <motion.div style={{ x: xRight2 }} className="absolute top-[18%] right-[-5%] w-[58%] h-[65%] z-20">
-          <Image src="/Assets/Right%20Mega%20Mendung.svg" alt="" fill className="object-cover object-left-top opacity-90" />
+        <motion.div style={{ x: xRight2 }} className="absolute top-[18%] right-[-5%] w-[65%] h-[73%] z-20">
+          <Image src="/Assets/Right%20Mega%20Mendung.svg" alt="" fill className="object-cover object-left-top" />
         </motion.div>
-        <motion.div style={{ x: xRight3 }} className="absolute top-[38%] right-[0%] w-[60%] h-[70%] z-30">
-          <Image src="/Assets/Right%20Mega%20Mendung.svg" alt="" fill className="object-cover object-left-top opacity-95" />
+        <motion.div style={{ x: xRight3 }} className="absolute top-[38%] right-[-5%] w-[65%] h-[73%] z-10">
+          <Image src="/Assets/Right%20Mega%20Mendung.svg" alt="" fill className="object-cover object-left-top" />
         </motion.div>
-        <motion.div style={{ x: xRight4 }} className="absolute top-[58%] right-[3%] w-[65%] h-[80%] z-40 drop-shadow-2xl">
+        <motion.div style={{ x: xRight4 }} className="absolute top-[58%] right-[-5%] w-[65%] h-[73%] z-20 drop-shadow-2xl">
           <Image src="/Assets/Right%20Mega%20Mendung.svg" alt="Right Mega Mendung" fill className="object-cover object-left-top" />
         </motion.div>
       </div>
