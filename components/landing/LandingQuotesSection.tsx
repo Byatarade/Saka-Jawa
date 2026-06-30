@@ -55,14 +55,14 @@ export default function LandingQuotesSection() {
   // Karena section ini sekarang tinggi, awan harus menyingkir lebih cepat (di 30% awal scroll)
   // Kita map 0.15 sampai 0.6 ke animasi penuh agar awan segera terbuka setelah sedikit scroll
   const xLeft1 = useTransform(scrollYProgress, [0, 0.6], ["0%", "-110%"]);
-  const xLeft2 = useTransform(scrollYProgress, [0, 0.7], ["0%", "-105%"]);
-  const xLeft3 = useTransform(scrollYProgress, [0, 0.8], ["0%", "-100%"]);
-  const xLeft4 = useTransform(scrollYProgress, [0, 0.6], ["0%", "-105%"]);
+  const xLeft2 = useTransform(scrollYProgress, [0.10, 0.7], ["0%", "-105%"]);
+  const xLeft3 = useTransform(scrollYProgress, [0.20, 0.8], ["0%", "-100%"]);
+  const xLeft4 = useTransform(scrollYProgress, [0.10, 0.6], ["0%", "-105%"]);
 
   const xRight1 = useTransform(scrollYProgress, [0, 0.6], ["0%", "110%"]);
-  const xRight2 = useTransform(scrollYProgress, [0, 0.7], ["0%", "105%"]);
-  const xRight3 = useTransform(scrollYProgress, [0, 0.8], ["0%", "100%"]);
-  const xRight4 = useTransform(scrollYProgress, [0, 0.6], ["0%", "105%"]);
+  const xRight2 = useTransform(scrollYProgress, [0.10, 0.7], ["0%", "105%"]);
+  const xRight3 = useTransform(scrollYProgress, [0.20, 0.8], ["0%", "100%"]);
+  const xRight4 = useTransform(scrollYProgress, [0.10, 0.6], ["0%", "105%"]);
 
   return (
     <section 
