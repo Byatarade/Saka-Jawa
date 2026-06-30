@@ -19,6 +19,10 @@ export const metadata: Metadata = {
     default: "Saka Jawa",
     template: "%s | Saka Jawa",
   },
+  applicationName: "Saka Jawa",
+  appleWebApp: {
+    title: "Saka Jawa",
+  },
   description:
     "Saka Jawa — Jelajahi kekayaan budaya Jawa: Batik, Wayang, Gamelan, dan Kuliner Tradisional. Website pelestarian budaya Jawa untuk generasi muda.",
   keywords: [
@@ -80,9 +84,9 @@ export const metadata: Metadata = {
     images: ["/Assets/Logo Utama.svg"],
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: "/Assets/Logo Utama.svg",
+    shortcut: "/Assets/Logo Utama.svg",
+    apple: "/Assets/Logo Utama.svg",
   },
   verification: {
     google: "k7S7SzDmRqJDPfk6b6TjVKvcypjfOnKwLQrTaZR72e0",
