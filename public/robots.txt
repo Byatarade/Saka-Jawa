@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sakajawa.vercel.app/sitemap.xml
+
+# Google Search Console Verification
+# google-site-verification=GCM6X5Hv4vnlrCyS_hvJYi-rH_gXgSmTRocRYjJgOLg
