@@ -41,10 +41,10 @@ export default function GamelanCeritaSection() {
             <div>
               <a
                 href="#"
-                className="inline-flex items-center gap-3 rounded-full bg-[#ffc832] px-6 py-3 font-semibold text-[#4e0b11] transition-transform hover:scale-105 active:scale-95"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#ffc832] px-6 py-3 font-semibold text-[#4e0b11] transition-transform hover:scale-105 active:scale-95"
               >
                 <span>Lihat Cerita</span>
-                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 fill-current ml-1" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
                 </svg>
               </a>
@@ -80,7 +80,9 @@ export default function GamelanCeritaSection() {
                     Lihat Ringkasan
                   </span>
                   <button className="w-8 h-8 rounded-full bg-[#4e0b11] text-white flex items-center justify-center transition-transform hover:scale-110">
-                    ▶
+                    <svg className="w-4 h-4 fill-current ml-0.5" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
                   </button>
                 </div>
               </div>
