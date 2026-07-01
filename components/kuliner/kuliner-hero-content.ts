@@ -14,10 +14,24 @@ export const kulinerHeroContent: HeroContent = {
     { id: "btn-tentang-kuliner", label: "Tentang Kuliner", variant: "primary", href: "#tentang" },
     { id: "btn-jelajahi-koleksi", label: "Jelajahi Koleksi", variant: "secondary", href: "#koleksi" },
   ],
-  image: {
-    src: "/Assets/kulinerHeroAsset.avif",
-    alt: "Kuliner Makanan Jawa",
-  },
+  images: [
+    {
+      src: "/Assets/Gambar Kuliner/go berkat.avif",
+      alt: "Sego Berkat",
+    },
+    {
+      src: "/Assets/Gambar Kuliner/go liwet.avif",
+      alt: "Nasi Liwet",
+    },
+    {
+      src: "/Assets/Gambar Kuliner/rawon.avif",
+      alt: "Rawon",
+    },
+    {
+      src: "/Assets/Gambar Kuliner/tahu kupat.avif",
+      alt: "Tahu Kupat",
+    },
+  ],
   dots: {
     count: 4,
     activeIndex: 1,
