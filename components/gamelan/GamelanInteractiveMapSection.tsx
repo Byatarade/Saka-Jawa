@@ -21,13 +21,13 @@ export default function GamelanInteractiveMapSection() {
           </div>
         </div>
 
-                {/* Interactive Map */}
+                        {/* Interactive Map */}
         <div className="relative w-full max-w-[1000px] aspect-[16/5] mx-auto mt-8 mb-8">
           {/* Base Map */}
           <div className="absolute inset-0 w-full h-full">
             <Image
               src="/Assets/Tanah Pendhopo.svg"
-              alt="Peta Tanah Pendhopo"
+              alt="Peta Pendhopo"
               fill
               className="object-contain"
               priority
@@ -55,7 +55,7 @@ export default function GamelanInteractiveMapSection() {
 
           <Link
             href="/kuliner"
-            className="absolute top-[-5%] left-[42%] w-[28%] aspect-[6/3] cursor-pointer hover:-translate-y-2 hover:scale-105 transition-all duration-300 origin-bottom z-10 drop-shadow-2xl group flex flex-col items-center"
+            className="absolute top-[-5%] left-[42%] w-[28%] aspect-[7/3] cursor-pointer hover:-translate-y-2 hover:scale-105 transition-all duration-300 origin-bottom z-10 drop-shadow-2xl group flex flex-col items-center"
           >
             <div className="relative w-full h-full">
               <Image
@@ -74,7 +74,7 @@ export default function GamelanInteractiveMapSection() {
 
           <Link
             href="/wayang"
-            className="absolute top-[35%] left-[29%] w-[28%] aspect-[6/3] cursor-pointer hover:-translate-y-2 hover:scale-105 transition-all duration-300 origin-bottom z-10 drop-shadow-2xl group flex flex-col items-center"
+            className="absolute top-[35%] left-[29%] w-[28%] aspect-[6/3] cursor-pointer hover:-translate-y-2 hover:scale-105 transition-all duration-300 origin-bottom z-20 drop-shadow-2xl group flex flex-col items-center"
           >
             <div className="relative w-full h-full">
               <Image
@@ -93,12 +93,12 @@ export default function GamelanInteractiveMapSection() {
 
           <Link
             href="/gamelan"
-            className="absolute top-[44%] left-[62%] w-[28%] aspect-[6/3] cursor-pointer hover:-translate-y-2 hover:scale-105 transition-all duration-300 origin-bottom z-20 drop-shadow-2xl group flex flex-col items-center"
+            className="absolute top-[44%] left-[62%] w-[28%] aspect-[7/3] cursor-pointer hover:-translate-y-2 hover:scale-105 transition-all duration-300 origin-bottom z-20 drop-shadow-2xl group flex flex-col items-center"
           >
-            <div className="absolute -top-[50%] left-1/2 -translate-x-1/2 w-[30%] aspect-square animate-bounce z-30 pointer-events-none">
+            <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[15%] aspect-square animate-bounce z-30 pointer-events-none">
               <Image src="/Assets/User Location.svg" alt="Lokasi Anda" fill className="object-contain" />
             </div>
-            <div className="relative w-full h-full z-10 drop-shadow-[0_0_20px_rgba(255,200,50,0.8)] scale-110">
+            <div className="relative w-full h-full drop-shadow-[0_0_20px_rgba(255,200,50,0.8)] scale-110">
               <Image
                 src="/Assets/Pendhopo Gamelan.svg"
                 alt="Pendhopo Gamelan"
@@ -106,7 +106,7 @@ export default function GamelanInteractiveMapSection() {
                 className="object-contain"
               />
             </div>
-            <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 whitespace-nowrap z-30 pointer-events-none">
+            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap z-30 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                <span className="font-['League_Spartan'] text-sm sm:text-base font-bold bg-[#ffc832] text-[#4e0b11] px-3 py-1 rounded-full shadow">
                   Pendhapa Gamelan (Anda di Sini)
                </span>
