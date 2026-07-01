@@ -85,7 +85,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY, pathname]);
 
-  const isHomePage = pathname === "/";
   // Text color logic: black on all pages because hero sections have light backgrounds
   const staticNavTextColor = "text-black";
 

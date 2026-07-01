@@ -12,8 +12,11 @@ function useTypewriter(text: string, speed = 30, trigger = true) {
   useEffect(() => {
     if (!trigger) return;
     
-    setDisplayed("");
-    setDone(false);
+    // Wrap state resets in setTimeout to prevent synchronous setState within the effect body
+    const timeoutId = setTimeout(() => {
+      setDisplayed("");
+      setDone(false);
+    }, 0);
     
     let i = 0;
     const id = setInterval(() => {
@@ -25,7 +28,10 @@ function useTypewriter(text: string, speed = 30, trigger = true) {
       }
     }, speed);
 
-    return () => clearInterval(id);
+    return () => {
+      clearTimeout(timeoutId);
+      clearInterval(id);
+    };
   }, [text, speed, trigger]);
 
   return { displayed, done };
