@@ -2,7 +2,6 @@
 
 // Menggunakan Image dari Next.js secara benar
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 function useTypewriter(text: string, speed = 30, trigger = true) {
@@ -108,12 +107,15 @@ export default function LandingChatbotSection() {
               )}
             </p>
             <div className="flex justify-end mt-4 md:mt-8">
-              <Link
-                href="/chatbot"
-                className="text-[#f1b434] font-semibold text-lg md:text-xl flex items-center gap-2 hover:opacity-80 transition-opacity"
+              <button
+                onClick={() => {
+                  window.dispatchEvent(new CustomEvent("open-suro-chat"));
+                  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+                }}
+                className="text-[#f1b434] font-semibold text-lg md:text-xl flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
               >
                 Tanya Sekarang <span aria-hidden="true">&rarr;</span>
-              </Link>
+              </button>
             </div>
           </div>
         </div>
