@@ -148,3 +148,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Hide footer on 404 Not Found page */
+body:has(#not-found-page) footer {
+  display: none !important;
+}

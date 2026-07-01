@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-cream flex flex-col items-center justify-center p-6 sm:p-12 relative overflow-hidden">
+    <div id="not-found-page" className="min-h-screen bg-cream flex flex-col items-center justify-center p-6 sm:p-12 relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-gold rounded-full mix-blend-multiply filter blur-[80px] opacity-30 animate-float"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-maroon rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-float-reverse"></div>
