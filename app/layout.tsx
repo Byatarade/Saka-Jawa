@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { League_Spartan } from "next/font/google";
 import "./globals.css";
 import Footer from "../components/shared/Footer";
+import Navbar from "../components/shared/Navbar";
 import SmoothScrolling from "../components/shared/SmoothScrolling";
 
 const leagueSpartan = League_Spartan({
@@ -180,6 +181,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col">
         <SmoothScrolling>
+          <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
         </SmoothScrolling>
