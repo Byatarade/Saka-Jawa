@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const navLeft = [
   { label: "Beranda", href: "/" },
@@ -15,7 +14,6 @@ const navRight = [
 ];
 
 export default function SharedNavbar() {
-  const pathname = usePathname();
 
   return (
     <header className="fixed left-1/2 top-6 z-[100] w-fit -translate-x-1/2">

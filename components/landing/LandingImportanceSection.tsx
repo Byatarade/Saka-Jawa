@@ -63,16 +63,18 @@ function StatCard({
   number,
   title,
   description,
+  duration = 900,
 }: {
   number: string;
   title: string;
   description: string;
+  duration?: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   // once:true → fires only the first time it enters view
   const inView = useInView(ref, { once: true, amount: 0.4 });
 
-  const scrambled = useScramble(number, inView, 900);
+  const scrambled = useScramble(number, inView, duration);
 
   return (
     <div ref={ref} className="relative group cursor-pointer min-h-[260px]">
@@ -134,7 +136,7 @@ export default function LandingImportanceSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full max-w-5xl mx-auto">
           {cards.map((card, idx) => (
-            <StatCard key={idx} {...card} />
+            <StatCard key={idx} {...card} duration={1500 + idx * 1000} />
           ))}
         </div>
       </div>
