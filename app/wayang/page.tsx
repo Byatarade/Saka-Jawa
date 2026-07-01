@@ -10,9 +10,12 @@ import { topicPageMetadata } from "@/data/pages";
 
 export const metadata: Metadata = topicPageMetadata.wayang;
 
+import SharedNavbar from "@/components/shared/SharedNavbar";
+
 export default function WayangPage() {
   return (
     <main>
+      <SharedNavbar />
       <WayangHeroSection />
       <WayangAboutSection />
       <WayangRagamSection />

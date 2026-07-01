@@ -10,9 +10,12 @@ import KulinerInteractiveMapSection from "@/components/kuliner/KulinerInteractiv
 
 export const metadata: Metadata = topicPageMetadata.kuliner;
 
+import SharedNavbar from "@/components/shared/SharedNavbar";
+
 export default function KulinerPage() {
   return (
     <main>
+      <SharedNavbar />
       <KulinerHeroSection />
       <KulinerAboutSection />
       <KulinerWaktuMakanSection />

@@ -9,10 +9,12 @@ import BatikInteractiveMapSection from "@/components/batik/BatikInteractiveMapSe
 import { topicPageMetadata } from "@/data/pages";
 
 export const metadata: Metadata = topicPageMetadata.batik;
+import SharedNavbar from "@/components/shared/SharedNavbar";
 
 export default function BatikPage() {
   return (
     <main>
+      <SharedNavbar />
       <BatikHeroSection />
       <BatikAboutSection />
       <BatikMotifSection />

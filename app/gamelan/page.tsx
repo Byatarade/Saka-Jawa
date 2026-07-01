@@ -11,9 +11,12 @@ import GamelanInteractiveMapSection from "@/components/gamelan/GamelanInteractiv
 
 export const metadata: Metadata = topicPageMetadata.gamelan;
 
+import SharedNavbar from "@/components/shared/SharedNavbar";
+
 export default function GamelanPage() {
   return (
     <main>
+      <SharedNavbar />
       <GamelanHeroSection />
       <GamelanAboutSection />
       <GamelanInstrumenSection />

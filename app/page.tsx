@@ -1,3 +1,4 @@
+import LandingNavbar from "@/components/landing/LandingNavbar";
 import LandingHeroSection from "@/components/landing/LandingHeroSection";
 import LandingHeritageSection from "@/components/landing/LandingHeritageSection";
 import LandingImportanceSection from "@/components/landing/LandingImportanceSection";
@@ -10,6 +11,7 @@ import LandingFloatingChatbot from "@/components/landing/LandingFloatingChatbot"
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
+      <LandingNavbar />
       <LandingHeroSection />
       <LandingHeritageSection />
       <LandingImportanceSection />
