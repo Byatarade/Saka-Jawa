@@ -110,7 +110,6 @@ export default function LandingChatbotSection() {
               <button
                 onClick={() => {
                   window.dispatchEvent(new CustomEvent("open-suro-chat"));
-                  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
                 }}
                 className="text-[#f1b434] font-semibold text-lg md:text-xl flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
               >
