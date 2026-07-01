@@ -5,9 +5,9 @@ import Image from "next/image";
 import GalleryModal from "@/components/shared/GalleryModal";
 
 const wayangGallery = [
-  { id: 1, title: "Wayang Kulit", image: "/Assets/wayangHeroAsset.avif" },
-  { id: 2, title: "Pementasan Wayang", image: "/Assets/Kelir Wayang Hero.svg" },
-  { id: 3, title: "Dalang & Kelir", image: "/Assets/wayangHeroAsset.avif" },
+  { id: 1, title: "Silsilah Pandawa & Kurawa", image: "/Assets/Gambar Wayang/silsilah wayang.jpg" },
+  { id: 2, title: "Pewayangan", image: "/Assets/Gambar Wayang/wayang1.jpg" },
+  { id: 3, title: "Wayang-wayang", image: "/Assets/Gambar Wayang/wayang2.jpg" },
 ];
 
 export default function WayangGallerySection() {

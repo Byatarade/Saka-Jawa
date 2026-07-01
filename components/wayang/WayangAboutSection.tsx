@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 const leftDetails = [
-  "Ambatik berarti menulis titik. Keahlian menulis motif halus menggunakan lilin malam panas.",
+  "Setiap tokoh wayang memiliki karakter, sifat, dan filosofi yang menggambarkan berbagai nilai kehidupan manusia.",
   "Diakui UNESCO sebagai Masterpiece of the Oral and Intangible Heritage of Humanity.",
-  "Setiap guratan motif memuat doa, ketabahan, ajaran hidup, dan berkah spiritual pemakainya.",
+  "Setiap pertunjukan wayang menggabungkan seni pedalangan, musik gamelan, sastra, tari, dan seni rupa dalam satu pementasan.",
 ];
 
 export default function WayangAboutSection() {

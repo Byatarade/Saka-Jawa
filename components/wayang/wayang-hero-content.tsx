@@ -18,6 +18,12 @@ export const wayangHeroContent: HeroContent = {
     src: "/Assets/Gambar Wayang/heroWayang.jpg",
     alt: "Seni Wayang Kulit Jawa",
   },
+  images: [
+    { src: "/Assets/Gambar Wayang/heroWayang.jpg", alt: "Ilustrasi Seni Wayang Kulit Jawa" },
+    { src: "/Assets/Gambar Wayang/wayang.jpg", alt: "Wayang 1" },
+    { src: "/Assets/Gambar Wayang/wayang1.jpg", alt: "Wayang 2" },
+    { src: "/Assets/Gambar Wayang/wayang2.jpg", alt: "Wayang 3" },
+  ],
   dots: {
     count: 4,
     activeIndex: 1,
