@@ -38,39 +38,9 @@ export default function GamelanAboutSection() {
 
       <div className="mx-auto w-full max-w-[var(--container-lg)] relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center">
-          
-          {/* Left Column */}
-          <div className="lg:col-span-6 flex flex-col text-white pt-10">
-            <h2 className="text-4xl md:text-[42px] font-bold text-[#FFC832] mb-6">
-              Gamelan Jawa
-            </h2>
-            <p className="text-base md:text-lg leading-relaxed text-gray-100 max-w-lg mb-12">
-              Gamelan adalah ansambel musik Jawa yang telah mengisi jiwa peradaban Nusantara selama berabad-abad. Setiap dentingan dan gong bukan sekadar bunyi — ia adalah doa yang mengalir, menghubungkan manusia dengan alam dan sang pencipta.
-            </p>
 
-            {/* 3 Icons Row */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pr-4">
-              {points.map((p, index) => (
-                <div key={index} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-4">
-                  {/* Decorative Icon */}
-                  <div className="h-10 w-12 relative opacity-90 flex justify-center sm:justify-start">
-                    <svg viewBox="0 0 34 26" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full">
-                      <path d="M0.5 13C0.5 13 8.5 0.5 17 0.5C25.5 0.5 33.5 13 33.5 13C33.5 13 25.5 25.5 17 25.5C8.5 25.5 0.5 13 0.5 13Z" stroke="#FFC832" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M17 0.5C14.5 6 14.5 20 17 25.5" stroke="#FFC832" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M25 5.5C20.5 9.5 20.5 16.5 25 20.5" stroke="#FFC832" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M9 5.5C13.5 9.5 13.5 16.5 9 20.5" stroke="#FFC832" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                  <p className="text-[13px] text-gray-200 leading-relaxed font-['League_Spartan']">
-                    {p.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Column: Tahukah Kamu Card */}
-          <div className="lg:col-span-6 relative w-full max-w-[540px] mx-auto lg:ml-auto mt-8 lg:mt-0">
+          {/* Left Column: Tahukah Kamu Card */}
+          <div className="lg:col-span-6 relative w-full max-w-[540px] mx-auto lg:mr-auto mt-8 lg:mt-0">
             {/* The Yellow Angle Accents */}
             <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 w-16 h-16 md:w-24 md:h-24 border-t-[8px] border-l-[8px] md:border-t-[12px] md:border-l-[12px] border-[#FFC832] rounded-tl-xl z-0"></div>
             <div className="absolute -bottom-3 -right-3 md:-bottom-4 md:-right-4 w-16 h-16 md:w-24 md:h-24 border-b-[8px] border-r-[8px] md:border-b-[12px] md:border-r-[12px] border-[#FFC832] rounded-br-xl z-0"></div>
@@ -113,8 +83,39 @@ export default function GamelanAboutSection() {
             </div>
           </div>
 
+          {/* Right Column: Gamelan Jawa Text */}
+          <div className="lg:col-span-6 flex flex-col text-white pt-10">
+            <h2 className="text-4xl md:text-[42px] font-bold text-[#FFC832] mb-6 text-center lg:text-right">
+              Gamelan Jawa
+            </h2>
+            <p className="text-base md:text-lg leading-relaxed text-gray-100 max-w-lg mb-12 text-center lg:text-right ml-auto">
+              Gamelan adalah ansambel musik Jawa yang telah mengisi jiwa peradaban Nusantara selama berabad-abad. Setiap dentingan dan gong bukan sekadar bunyi — ia adalah doa yang mengalir, menghubungkan manusia dengan alam dan sang pencipta.
+            </p>
+
+            {/* 3 Icons Row */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pl-4">
+              {points.map((p, index) => (
+                <div key={index} className="flex flex-col items-center lg:items-end text-center lg:text-right gap-4">
+                  {/* Daun Kuning Icon */}
+                  <div className="h-10 w-12 relative opacity-90 flex justify-center lg:justify-end">
+                    <Image
+                      src="/Assets/Daun Kuning.svg"
+                      alt="Ikon daun"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <p className="text-[13px] text-gray-200 leading-relaxed font-['League_Spartan']">
+                    {p.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
   );
 }
+
