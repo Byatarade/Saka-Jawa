@@ -12,46 +12,55 @@ export default function KulinerDaerahSection() {
       id: "barat",
       title: "Jawa Barat",
       desc: "Jelajahi kekayaan kuliner Jawa Barat yang memanjakan selera.",
+      bgImage: "/assets/Gambar kuliner/Jawa Barat/tahu kupat.avif",
     },
     {
       id: "tengah",
       title: "Jawa Tengah",
       desc: "Jelajahi kekayaan kuliner Jawa Tengah yang memanjakan selera.",
+      bgImage: "/assets/Gambar kuliner/Jawa Tengah/magelangan.avif",
     },
     {
       id: "timur",
       title: "Jawa Timur",
       desc: "Jelajahi kekayaan kuliner Jawa Timur yang memanjakan selera.",
+      bgImage: "/assets/Gambar kuliner/Jawa Timur/lontong balap.avif",
     },
   ];
 
-  // Data galeri per daerah (berasal dari kuliner-data sebelumnya)
+  // Data galeri per daerah
   const galleryData: Record<string, { gallery: { id: string; src: string; title: string; description: string }[] }> = {
     barat: {
       gallery: [
         {
           id: "barat-1",
-          title: "Nasi Liwet",
-          description: "Nasi Liwet adalah hidangan ikonik khas Solo (Surakarta) yang dimasak dengan santan, serai, dan daun salam hingga menghasilkan aroma harum yang khas. Disajikan dengan labu siam, areh (santan kental), ayam suwir, dan telur, hidangan ini sering kali dinikmati sebagai sajian yang mengenyangkan dan penuh cita rasa.",
-          src: "/Assets/Gambar Kuliner/go liwet.avif",
+          title: "Empal Gentong",
+          description: "Makanan khas Cirebon yang mirip dengan gulai dan dimasak secara tradisional menggunakan kayu bakar di dalam gentong. Berisi daging, usus, dan babat sapi dengan kuah santan kuning yang kaya rempah.",
+          src: "/assets/Gambar kuliner/Jawa Barat/empal-gentong.avif",
         },
         {
           id: "barat-2",
-          title: "Gudeg",
-          description: "Gudeg adalah masakan khas Yogyakarta yang terbuat dari nangka muda dimasak berjam-jam bersama santan dan rempah pilihan. Rasanya manis gurih, biasanya disajikan dengan krecek, ayam opor, dan telur pindang.",
-          src: "/Assets/Gambar Kuliner/rawon.avif",
+          title: "Lotek",
+          description: "Sajian khas Jawa Barat berupa rebusan sayuran segar seperti bayam, kapri, dan kacang panjang yang disiram dengan bumbu kacang legit nan gurih. Cocok dinikmati bersama kerupuk dan lontong.",
+          src: "/assets/Gambar kuliner/Jawa Barat/lotek.avif",
         },
         {
           id: "barat-3",
-          title: "Tahu Kupat",
-          description: "Tahu Kupat adalah sajian ringan khas Jawa berupa tahu goreng dan ketupat yang disiram kuah manis dari kecap manis, bawang goreng, dan irisan daun bawang yang segar.",
-          src: "/Assets/Gambar Kuliner/tahu kupat.avif",
+          title: "Seblak",
+          description: "Jajanan populer khas Sunda dengan cita rasa gurih dan pedas. Terbuat dari kerupuk basah yang dimasak dengan bumbu kencur aromatik, dipadukan dengan telur, sosis, bakso, dan mie.",
+          src: "/assets/Gambar kuliner/Jawa Barat/seblak-creamy-mie-bakso.avif",
         },
         {
           id: "barat-4",
-          title: "Gorengan Berkat",
-          description: "Hidangan istimewa khas Jawa yang biasa disajikan dalam acara-acara adat dan syukuran. Menggunakan rempah pilihan yang diwariskan turun-temurun.",
-          src: "/Assets/Gambar Kuliner/go berkat.avif",
+          title: "Tahu Gejrot",
+          description: "Camilan khas Cirebon yang terdiri dari potongan tahu pong goreng yang disiram dengan kuah asam manis pedas berbumbu cabai, bawang merah, bawang putih, dan gula merah yang digejrot (ditumbuk).",
+          src: "/assets/Gambar kuliner/Jawa Barat/tahu gejrot.avif",
+        },
+        {
+          id: "barat-5",
+          title: "Tahu Kupat",
+          description: "Hidangan tradisional khas Sunda yang memadukan potongan ketupat dan tahu goreng, disiram dengan bumbu kacang kental yang manis dan gurih, dilengkapi dengan tauge dan kecap manis.",
+          src: "/assets/Gambar kuliner/Jawa Barat/tahu kupat.avif",
         },
       ],
     },
@@ -59,27 +68,33 @@ export default function KulinerDaerahSection() {
       gallery: [
         {
           id: "tengah-1",
-          title: "Rawon",
-          description: "Rawon adalah sup daging sapi berkuah hitam pekat yang khasnya berasal dari buah kluwek. Hidangan legendaris ini memiliki cita rasa gurih yang dalam dan aroma rempah yang kuat, biasanya disajikan dengan nasi putih, tauge, dan sambal.",
-          src: "/Assets/Gambar Kuliner/rawon.avif",
+          title: "Nasi Berkat",
+          description: "Nasi bungkus daun singkong/jati khas Wonogiri yang biasanya disajikan dalam acara syukuran atau hajatan, berisi nasi dengan aneka lauk pauk sederhana seperti oseng tempe, mi, dan daging sapi.",
+          src: "/assets/Gambar kuliner/Jawa Tengah/Nasi Berkat wonogiri.avif",
         },
         {
           id: "tengah-2",
-          title: "Nasi Liwet",
-          description: "Nasi Liwet adalah hidangan ikonik khas Solo yang dimasak dengan santan. Cocok dinikmati bersama keluarga.",
-          src: "/Assets/Gambar Kuliner/go liwet.avif",
+          title: "Nasi Goreng Magelangan",
+          description: "Sering juga disebut nasi ruwet, hidangan khas Magelang ini mencampurkan nasi goreng dengan mi basah yang dimasak bersama bumbu rempah gurih, sayuran, dan suwiran ayam.",
+          src: "/assets/Gambar kuliner/Jawa Tengah/magelangan.avif",
         },
         {
           id: "tengah-3",
-          title: "Tahu Kupat",
-          description: "Sajian khas Jawa yang segar dan mengenyangkan. Perpaduan ketupat dan tahu goreng dengan kuah kecap manis yang lezat.",
-          src: "/Assets/Gambar Kuliner/tahu kupat.avif",
+          title: "Nasi Liwet",
+          description: "Nasi Liwet adalah hidangan ikonik khas Solo yang dimasak dengan santan, serai, dan daun salam. Disajikan dengan labu siam, areh (santan kental), ayam suwir, dan telur yang lezat.",
+          src: "/assets/Gambar kuliner/Jawa Tengah/nasi liwet.avif",
         },
         {
           id: "tengah-4",
-          title: "Gorengan Berkat",
-          description: "Hidangan berkat khas Jawa. Kaya rempah dan dimasak dengan penuh kesabaran.",
-          src: "/Assets/Gambar Kuliner/go berkat.avif",
+          title: "Selat Solo",
+          description: "Adaptasi lokal dari bistik Eropa. Terdiri dari irisan daging sapi rebus, telur pindang, aneka sayuran segar, yang disiram dengan kuah semur encer manis gurih dan saus mustard Jawa.",
+          src: "/assets/Gambar kuliner/Jawa Tengah/selat Solo.avif",
+        },
+        {
+          id: "tengah-5",
+          title: "Nasi Timlo",
+          description: "Sup khas kota Solo berkuah bening gurih yang berisi irisan ati ampela ayam, dadar gulung, sosis solo, mi soun, telur pindang, dan suwiran ayam. Segar dan menghangatkan.",
+          src: "/assets/Gambar kuliner/Jawa Tengah/timlo.avif",
         },
       ],
     },
@@ -87,27 +102,33 @@ export default function KulinerDaerahSection() {
       gallery: [
         {
           id: "timur-1",
-          title: "Tahu Kupat",
-          description: "Tahu Kupat adalah sajian yang hangat dan sederhana khas masyarakat Jawa. Tekstur ketupat yang lembut berpadu dengan tahu goreng yang renyah, disiram kuah kecap manis dengan sentuhan cabai rawit yang memberikan kehangatan.",
-          src: "/Assets/Gambar Kuliner/tahu kupat.avif",
+          title: "Lontong Balap",
+          description: "Makanan ikonik Surabaya yang memadukan lontong, tauge melimpah, tahu goreng, dan lentho. Disiram kuah gurih beraroma petis yang khas dan ditaburi bawang goreng renyah.",
+          src: "/assets/Gambar kuliner/Jawa Timur/lontong balap.avif",
         },
         {
           id: "timur-2",
-          title: "Rawon",
-          description: "Semangkuk rawon hangat menjadi pilihan favorit. Kuah hitam pekat yang kaya rempah memberikan kehangatan di tubuh.",
-          src: "/Assets/Gambar Kuliner/rawon.avif",
+          title: "Pecel",
+          description: "Sayuran rebus yang disiram dengan sambal kacang pecel khas Madiun yang legit dan pedas. Biasanya disajikan dalam pincuk daun pisang dan dinikmati bersama rempeyek atau kerupuk karak.",
+          src: "/assets/Gambar kuliner/Jawa Timur/pecel madiun.avif",
         },
         {
           id: "timur-3",
-          title: "Gorengan Berkat",
-          description: "Hidangan berkat khas Jawa yang sempurna dinikmati bersama keluarga. Dibuat dari bahan-bahan pilihan dengan bumbu warisan leluhur.",
-          src: "/Assets/Gambar Kuliner/go berkat.avif",
+          title: "Rawon",
+          description: "Sup daging sapi berkuah hitam pekat khas Jawa Timur yang warnanya berasal dari kluwek. Memiliki cita rasa gurih yang dalam, disajikan dengan tauge pendek, telur asin, dan sambal.",
+          src: "/assets/Gambar kuliner/Jawa Timur/rawon.avif",
         },
         {
           id: "timur-4",
-          title: "Nasi Liwet",
-          description: "Nasi Liwet Solo juga nikmat sebagai sajian yang hangat. Aroma santan dan rempahnya yang harum menggugah selera.",
-          src: "/Assets/Gambar Kuliner/go liwet.avif",
+          title: "Sate Ayam",
+          description: "Sate ayam khas Madura, terkenal dengan bumbu kacangnya yang kental, manis, dan gurih, meresap sempurna ke dalam potongan daging ayam yang dibakar dengan arang batok kelapa.",
+          src: "/assets/Gambar kuliner/Jawa Timur/sate ayam.avif",
+        },
+        {
+          id: "timur-5",
+          title: "Soto Lamongan",
+          description: "Soto ayam berkuah kuning gurih yang khas, dilengkapi suwiran ayam, soun, kol, dan telur. Ciri utamanya adalah taburan bubuk koya yang membuat kuahnya semakin kental dan istimewa.",
+          src: "/assets/Gambar kuliner/Jawa Timur/soto-lamongan.avif",
         },
       ],
     },
@@ -133,21 +154,30 @@ export default function KulinerDaerahSection() {
             {daerahList.map((item) => (
               <div
                 key={item.id}
-                className="rounded-xl border border-[#4e0b11] bg-gradient-to-r from-white from-50% to-[#a3a3a3] overflow-hidden shadow-sm relative min-h-[220px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl block text-left w-full"
+                className="rounded-xl border border-[#4e0b11] overflow-hidden shadow-sm relative min-h-[220px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl block text-left w-full group"
               >
-                <div className="p-6 h-full flex flex-col justify-between w-[65%] z-10 relative">
+                {/* Background Image */}
+                <div 
+                  className="absolute inset-0 z-0 bg-cover bg-right transition-transform duration-500 group-hover:scale-110"
+                  style={{ backgroundImage: `url('${item.bgImage}')` }}
+                />
+                
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#4e0b11] from-45% to-transparent" />
+
+                <div className="p-6 h-full flex flex-col justify-between w-[70%] z-10 relative">
                   <div>
-                    <h3 className="font-['League_Spartan'] text-xl font-bold text-[#4e0b11] mb-2">
+                    <h3 className="font-['League_Spartan'] text-xl font-bold text-[#FFC832] mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-xs text-black leading-relaxed font-medium">
+                    <p className="text-xs text-gray-300 leading-relaxed font-medium">
                       {item.desc}
                     </p>
                   </div>
                   <div className="mt-6">
                     <button
                       onClick={() => setSelectedDaerahId(item.id)}
-                      className="inline-flex items-center gap-2 text-[#4e0b11] text-xs font-bold border border-[#4e0b11] rounded-full px-4 py-1.5 hover:bg-[#4e0b11] hover:text-white transition-all duration-300"
+                      className="inline-flex items-center gap-2 text-white text-xs font-bold border border-white rounded-full px-4 py-1.5 hover:bg-[#FFC832] hover:text-[#4e0b11] hover:border-transparent transition-all duration-300"
                     >
                       Lihat Detail
                       <svg
