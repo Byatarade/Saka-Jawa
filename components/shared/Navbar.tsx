@@ -12,7 +12,7 @@ const navLeft = [
 
 const navRight = [
   { label: "Permainan", href: "/#permainan" },
-  { label: "Tentang", href: "/#tentang" },
+  { label: "Tentang Kami", href: "/tentang-kami" },
 ];
 
 const NavContent = () => (
