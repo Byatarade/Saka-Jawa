@@ -128,10 +128,10 @@ export default function ChatBubble({
         <div className="bg-[#4E0B11] px-4 py-3 flex items-center gap-3 shrink-0">
           <div className="relative w-10 h-10 rounded-full overflow-hidden bg-[#FFC832] flex items-center justify-center shrink-0">
             <Image
-              src="/Assets/Chatbot Abdi Dalem.svg"
+              src="/Assets/Chatbot Profil.png"
               alt="Suro"
               fill
-              sizes="40px"
+              sizes="55px"
               unoptimized
               className="object-cover object-top scale-[1.05] translate-y-[2px]"
             />
@@ -160,7 +160,7 @@ export default function ChatBubble({
         </div>
 
         {/* ── Messages Area ── */}
-        <div className="flex-1 overflow-y-auto bg-[#FFF8E7] px-3 py-4 space-y-3 scrollbar-thin">
+        <div data-lenis-prevent className="flex-1 min-h-0 overflow-y-auto overscroll-contain touch-pan-y bg-[#FFF8E7] px-3 py-4 space-y-3 scrollbar-thin">
           {messages.map((msg) => (
             <div
               key={msg.id}
@@ -171,10 +171,10 @@ export default function ChatBubble({
               {msg.sender === "suro" && (
                 <div className="relative w-7 h-7 rounded-full overflow-hidden bg-[#FFC832] shrink-0 mr-2 mt-1">
                   <Image
-                    src="/Assets/Chatbot Abdi Dalem.svg"
+                    src="/Assets/Chatbot Profil.png"
                     alt=""
                     fill
-                    sizes="28px"
+                    sizes="38px"
                     unoptimized
                     className="object-cover object-top scale-[1.05] translate-y-[2px]"
                   />
@@ -197,10 +197,10 @@ export default function ChatBubble({
             <div className="flex justify-start">
               <div className="relative w-7 h-7 rounded-full overflow-hidden bg-[#FFC832] shrink-0 mr-2 mt-1">
                 <Image
-                  src="/Assets/Chatbot Abdi Dalem.svg"
+                  src="/Assets/Chatbot Profil.png"
                   alt=""
                   fill
-                  sizes="28px"
+                  sizes="38px"
                   unoptimized
                   className="object-cover object-top scale-[1.05] translate-y-[2px]"
                 />
@@ -219,7 +219,7 @@ export default function ChatBubble({
         {/* ── Quick Topics ── */}
         <div className="bg-white border-t border-[#4E0B11]/10 px-3 py-2 shrink-0">
           {/* Category Tabs */}
-          <div className="flex gap-1.5 overflow-x-auto pb-1 scrollbar-none">
+          <div data-lenis-prevent className="flex gap-1.5 overflow-x-auto pb-1 scrollbar-none">
             {chatbotData.map((cat: ChatCategory) => (
               <button
                 key={cat.category}
