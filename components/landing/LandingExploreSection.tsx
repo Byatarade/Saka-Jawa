@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function LandingExploreSection() {
   return (
-    <section className="bg-white pt-24 pb-4 px-6 md:px-12 w-full flex flex-col items-center overflow-hidden">
+    <section id="explore-section" className="bg-white pt-24 pb-4 px-6 md:px-12 w-full flex flex-col items-center overflow-hidden">
       <div className="max-w-[1200px] w-full flex flex-col items-center">
         <h2 className="text-[32px] md:text-[42px] font-extrabold text-[#111] mb-2 text-center tracking-tight">
           Jelajahi Kekayaan Budaya Jawa
