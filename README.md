@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Saka-Jawa
 
-## Getting Started
+Proyek ini adalah sebuah website yang dibangun menggunakan teknologi modern untuk memberikan pengalaman pengguna yang interaktif dan dinamis. Proyek ini memuat berbagai informasi dan komponen menarik, khususnya yang berkaitan dengan kebudayaan Jawa (seperti Gamelan, Batik, Kuliner dan Wayang).
 
-First, run the development server:
+## 🚀 Tech Stack
 
+Proyek ini menggunakan beberapa teknologi utama (Tech Stack) sebagai berikut:
+
+*   **[Next.js (v16+)](https://nextjs.org/)**: Framework React yang digunakan untuk membangun antarmuka pengguna, mendukung Server-Side Rendering (SSR) dan Static Site Generation (SSG) untuk performa yang optimal.
+*   **[React (v19)](https://react.dev/)**: Library JavaScript untuk membangun antarmuka pengguna berbasis komponen.
+*   **[TypeScript (v5)](https://www.typescriptlang.org/)**: Superset dari JavaScript yang menambahkan static typing, membuat kode lebih aman dan mudah di-maintain.
+*   **[Tailwind CSS (v4)](https://tailwindcss.com/)**: Framework CSS utility-first yang mempercepat proses styling dan pembuatan desain yang responsif.
+*   **[Framer Motion](https://www.framer.com/motion/)**: Library animasi untuk React yang digunakan untuk membuat transisi dan animasi yang halus dan kompleks.
+*   **[Lenis](https://lenis.darkroom.engineering/)**: Library untuk efek *smooth scrolling* yang membuat pengalaman navigasi di halaman web menjadi lebih elegan dan mulus.
+*   **[Lucide React](https://lucide.dev/)**: Kumpulan ikon yang indah dan konsisten yang digunakan di seluruh aplikasi.
+
+## 🛠️ Cara Menjalankan Proyek (Setelah di-Clone)
+
+Ikuti langkah-langkah berikut untuk menjalankan proyek ini di komputer lokal Anda:
+
+### 1. Persyaratan Sistem
+Pastikan Anda telah menginstal **Node.js** di komputer Anda. Anda bisa mengunduhnya dari [situs resmi Node.js](https://nodejs.org/).
+
+### 2. Clone Repositori
+Clone repositori proyek ini ke komputer lokal Anda menggunakan Git:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Golek-Howo/Saka-Jawa.git
+cd Saka-Jawa
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Instalasi Dependensi
+Setelah masuk ke dalam folder proyek, instal semua dependensi yang diperlukan dengan menjalankan perintah:
+```bash
+npm install
+```
+*(Bisa juga menggunakan `yarn install`, `pnpm install`, atau `bun install` jika Anda menggunakan package manager tersebut)*
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. Menjalankan Development Server
+Untuk menjalankan proyek pada mode pengembangan (development), jalankan perintah berikut:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 5. Buka di Browser
+Setelah server berjalan, buka browser Anda dan akses alamat berikut:
+```text
+http://localhost:3000
+```
+Sekarang Anda sudah bisa melihat aplikasi berjalan dan siap untuk melakukan perubahan kode!
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Build untuk Produksi
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Jika Anda ingin mem-build aplikasi ini untuk tahap produksi, jalankan:
+```bash
+npm run build
+```
+Kemudian, untuk menjalankan hasil build produksi:
+```bash
+npm run start
+```
